@@ -39,6 +39,7 @@
                                         <Setter Target="DownSpinButton.Visibility" Value="Visible" />
                                         <Setter Target="UpSpinButton.Visibility" Value="Visible" />
                                         <Setter Target="InputEater.Visibility" Value="Visible" />
+                                        <Setter Target="InputBox.MinWidth" Value="{ThemeResource NumberBoxMinWidth}" />
                                     </VisualState.Setters>
                                 </VisualState>
 
@@ -483,7 +484,7 @@
                                 </VisualState>
                                 <VisualState x:Name="SpinButtonsVisible">
                                     <VisualState.Setters>
-                                        <Setter Target="DeleteButton.Margin" Value="0,0,72,0" />
+                                        <Setter Target="SpinButtonsColumn.Width" Value="72" />
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
@@ -499,7 +500,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition x:Name="SpinButtonsColumn" Width="Auto" />
                         </Grid.ColumnDefinitions>
 
                         <ContentPresenter x:Name="HeaderContentPresenter"
